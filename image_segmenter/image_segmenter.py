@@ -50,7 +50,12 @@ class ImageSegmenter:
             channels[colorsp] (np.array): The selected color space.
         """
         # Convert to grayscale.
-        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        if img.ndim == 3:
+            gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        elif img.ndim == 1:
+            gray = img
+        else:
+            raise ValueError(f'Image must be 1 or 3 channels. Got {img.ndim} channels.')
         # Split BGR.
         red, green, blue = cv2.split(img)
         # Convert to HSV.
