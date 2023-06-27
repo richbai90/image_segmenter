@@ -6,8 +6,6 @@ from os import path
 A module for writing VOC files for use with the ImageSegmenter class.
 """
 
-__version__ = '0.0.1'
-
 # create an enum for the different bounding box formats
 class BBoxFmt():
     '''

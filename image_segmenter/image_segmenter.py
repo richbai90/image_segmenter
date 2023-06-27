@@ -7,8 +7,6 @@ date: 2023-06-08
 description: A class for annotating images with bounding boxes using various image processing techniques.
 """
 
-__version__ = '0.2.0'
-
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
