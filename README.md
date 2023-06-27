@@ -1,6 +1,6 @@
-# ImageAnnotator
+# ImageSegmenter
 
-This Python package provides a class `ImageAnnotator` for annotating images with bounding boxes using various image processing techniques. 
+This Python package provides a class `ImageSegmenter` for annotating images with bounding boxes using various image processing techniques. 
 
 ## Table of Contents
 
@@ -12,11 +12,11 @@ This Python package provides a class `ImageAnnotator` for annotating images with
 
 ## Background
 
-Annotating images is a crucial part of any machine learning project that deals with images. The `ImageAnnotator` class provided in this package simplifies this process. It uses various image processing techniques like morphological operations, thresholding, and channel selection to help generate accurate bounding boxes. It also includes the ability to visualize the results, save the annotations, and apply various filters.
+Image segmentation and annotation is a crucial part of any machine learning project that deals with images. The `ImageSegmenter` class provided in this package simplifies this process. It uses various image processing techniques like morphological operations, thresholding, and channel selection to help generate accurate bounding boxes. It also includes the ability to visualize the results, save the annotations, and apply various filters.
 
 ## Installation
 
-The `ImageAnnotator` package requires:
+The `ImageSegmenter` package requires:
 
 - OpenCV
 - NumPy
@@ -29,21 +29,21 @@ To install these dependencies, you can use pip:
 pip install opencv-python numpy matplotlib voc-writer
 ```
 
-To use the `ImageAnnotator` class, simply include it in your Python script:
+To use the `ImageSegmenter` class, simply include it in your Python script:
 
 ```python
-from image_annotator import ImageAnnotator
+from image_segmenter import ImageSegmenter
 ```
 
 ## Usage
 
-Here's an example usage of the `ImageAnnotator` class:
+Here's an example usage of the `ImageSegmenter` class:
 
 ```python
-from image_annotator import ImageAnnotator
+from image_segmenter import ImageSegmenter
 
-# Instantiate the ImageAnnotator
-annotator = ImageAnnotator()
+# Instantiate the ImageSegmenter
+annotator = ImageSegmenter()
 
 # Read an image
 image = annotator.read_image('path_to_image')
@@ -81,3 +81,7 @@ annotator.save_annotations('path_to_save_annotations', image, bboxes)
 - add support for other image formats
 - add support for other image processing techniques
 - add support for other annotation formats
+
+
+# Special Thanks
+A special thanks to **Kukil**, the author of [this guide](https://learnopencv.com/automated-image-annotation-tool-using-opencv-python/) from which these methods were generated
